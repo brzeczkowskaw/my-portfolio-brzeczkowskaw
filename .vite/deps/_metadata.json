@@ -1,0 +1,70 @@
+{
+  "hash": "39aaa99a",
+  "configHash": "3691f048",
+  "lockfileHash": "cab20a7e",
+  "browserHash": "0e516bdf",
+  "optimized": {
+    "vue": {
+      "src": "../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
+      "file": "vue.js",
+      "fileHash": "bf529cfb",
+      "needsInterop": false
+    },
+    "pinia": {
+      "src": "../../node_modules/pinia/dist/pinia.mjs",
+      "file": "pinia.js",
+      "fileHash": "bd4d8f18",
+      "needsInterop": false
+    },
+    "vue-scrollto": {
+      "src": "../../node_modules/vue-scrollto/vue-scrollto.js",
+      "file": "vue-scrollto.js",
+      "fileHash": "eab9427c",
+      "needsInterop": true
+    },
+    "vuetify/labs/components": {
+      "src": "../../node_modules/vuetify/lib/labs/components.mjs",
+      "file": "vuetify_labs_components.js",
+      "fileHash": "982207b4",
+      "needsInterop": false
+    },
+    "vuetify/directives": {
+      "src": "../../node_modules/vuetify/lib/directives/index.mjs",
+      "file": "vuetify_directives.js",
+      "fileHash": "0be0da89",
+      "needsInterop": false
+    },
+    "vuetify": {
+      "src": "../../node_modules/vuetify/lib/framework.mjs",
+      "file": "vuetify.js",
+      "fileHash": "b1d19804",
+      "needsInterop": false
+    },
+    "vuetify/iconsets/fa": {
+      "src": "../../node_modules/vuetify/lib/iconsets/fa.mjs",
+      "file": "vuetify_iconsets_fa.js",
+      "fileHash": "6f316e68",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-RD6SDGU3": {
+      "file": "chunk-RD6SDGU3.js"
+    },
+    "chunk-WC3LLN2K": {
+      "file": "chunk-WC3LLN2K.js"
+    },
+    "chunk-WE2Q7655": {
+      "file": "chunk-WE2Q7655.js"
+    },
+    "chunk-Q464UZNM": {
+      "file": "chunk-Q464UZNM.js"
+    },
+    "chunk-GU3YDFVY": {
+      "file": "chunk-GU3YDFVY.js"
+    },
+    "chunk-Y2F7D3TJ": {
+      "file": "chunk-Y2F7D3TJ.js"
+    }
+  }
+}

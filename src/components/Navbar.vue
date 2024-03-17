@@ -9,7 +9,7 @@ import { ref } from 'vue'
       <v-spacer />
       <div>
         <ul class="nav">
-          <li><a href="#start-info">Home</a></li>
+          <li><a href="#">Home</a></li>
           <li><a href="#tools">Tools</a></li>
           <li><a href="#page-projecs">Projects</a></li>
           <li><a href="#ui-projects">UI projects</a></li>
