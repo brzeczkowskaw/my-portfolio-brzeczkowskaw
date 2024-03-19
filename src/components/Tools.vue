@@ -15,7 +15,7 @@ import { tools } from '../variables/tools'
     <v-card 
       class="pa-4 mx-5 my-10 text-center" 
       color="background"
-      elevation="12"
+      elevation="8"
     >
       <div class="my-8">
         <v-card 

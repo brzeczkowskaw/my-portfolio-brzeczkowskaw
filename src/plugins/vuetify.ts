@@ -10,7 +10,7 @@ const defaultTheme = {
     primary: "#ccff33",
     secondary: "#38b000",
     tertiary: "#007200",
-    background: "#004b23",
+    background: "#052e18",
   },
 };
 
