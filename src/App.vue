@@ -13,6 +13,17 @@ import Navbar from './components/Navbar.vue'
 </template>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Mallanna&family=Squada+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=GFS+Didot&family=Mallanna&family=Squada+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=GFS+Didot&family=Mallanna&family=Special+Elite&family=Squada+One&display=swap');
+
+h2,
+h3 {
+  font-family: "Mallana"
+}
+p {
+  font-family: "Squada One"
+}
 
 #app {
   width: 100vw;

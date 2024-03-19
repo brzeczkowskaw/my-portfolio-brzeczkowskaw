@@ -37,9 +37,6 @@ import { contacts } from '../variables/contact'
 </template>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Mallanna&family=Squada+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=GFS+Didot&family=Mallanna&family=Squada+One&display=swap');
-
 .contact-list {
   padding-top: 30vh;
   padding-bottom: 20vh;

@@ -12,7 +12,7 @@ import { ref } from 'vue'
           <li><a href="#">About</a></li>
           <li><a href="#cv">CV</a></li>
           <li><a href="#tools">Tools</a></li>
-          <li><a href="#page-projecs">Projects</a></li>
+          <li><a href="#page-projects">Projects</a></li>
           <li><a href="#ui-projects">UI projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>

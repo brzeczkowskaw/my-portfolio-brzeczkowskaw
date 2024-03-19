@@ -3,6 +3,7 @@ import { ref } from 'vue'
 import Tools from '../components/Tools.vue'
 import Contact from '../components/Contact.vue'
 import CvPage from '../components/CvPage.vue'
+import Projects from '../components/Projects.vue'
 
 </script>
 
@@ -15,7 +16,9 @@ import CvPage from '../components/CvPage.vue'
     <div id="tools" class="part-height">
       <Tools />
     </div>
-    <div id="page-projects" class="part-height">projects</div>
+    <div id="page-projects" class="part-height">
+      <Projects />
+    </div>
     <div id="ui-projects" class="part-height">ui projects</div>
     <div id="contact">
       <Contact />
@@ -24,7 +27,7 @@ import CvPage from '../components/CvPage.vue'
       color="background"
       class="d-flex justify-end mr-5"
     >
-      <p>Made with </p><p class="heart mx-3"> &#10084; </p> <p> by <a href="https://brzeczkowskaw.netlify.app/#/">Weronika Brzeczkowska-Kuzianik</a></p>
+      <p>Made with </p><p class="heart mx-3"> &#10084; </p> <p> by <a href="https://brzeczkowskaw.netlify.app/#/" target="_blank">Weronika Brzeczkowska-Kuzianik</a></p>
     </v-footer>
   </v-container>
 </template>
@@ -36,7 +39,7 @@ p {
   font-family: "GFS Didot"
 }
 .part-height {
-  height: 100vh;
+  min-height: 100vh;
   padding-top: 20px;
 }
 a {
