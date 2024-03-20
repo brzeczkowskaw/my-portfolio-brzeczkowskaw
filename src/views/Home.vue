@@ -4,6 +4,7 @@ import Tools from '../components/Tools.vue'
 import Contact from '../components/Contact.vue'
 import CvPage from '../components/CvPage.vue'
 import Projects from '../components/Projects.vue'
+import UiProjects from '../components/UiProjects.vue'
 
 </script>
 
@@ -19,7 +20,9 @@ import Projects from '../components/Projects.vue'
     <div id="page-projects" class="part-height">
       <Projects />
     </div>
-    <div id="ui-projects" class="part-height">ui projects</div>
+    <div id="ui-projects" class="part-height">
+      <UiProjects />
+    </div>
     <div id="contact">
       <Contact />
     </div>
