@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-
 </script>
 
 <template>
@@ -9,7 +7,7 @@ import { ref } from 'vue'
       <v-spacer />
       <div>
         <ul class="nav">
-          <li><a href="#">About</a></li>
+          <li><a href="#about">About</a></li>
           <li><a href="#cv">CV</a></li>
           <li><a href="#tools">Tools</a></li>
           <li><a href="#page-projects">Projects</a></li>

@@ -5,10 +5,10 @@ import Navbar from './components/Navbar.vue'
 
 <template>
   <v-app id="app">
-    <component :is="layoutComponent || 'div'">
+    <v-component>
       <Navbar />
       <Home class="mt-5" />
-    </component>
+    </v-component>
   </v-app>
 </template>
 

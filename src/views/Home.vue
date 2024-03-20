@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { ref } from 'vue'
 import Tools from '../components/Tools.vue'
 import Contact from '../components/Contact.vue'
 import CvPage from '../components/CvPage.vue'
