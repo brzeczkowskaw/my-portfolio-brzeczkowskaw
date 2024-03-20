@@ -23,7 +23,7 @@ import { uiProjects } from '../variables/uiProjects'
       <v-row>
         <v-col class="my-5" align="center">
           <v-img 
-            :src="`src/assets/${item.photo}.jpg`"
+            :src="`public/assets/${item.photo}.jpg`"
             class="picture"
           />
         </v-col>
