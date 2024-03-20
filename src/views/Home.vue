@@ -6,12 +6,14 @@ import CvPage from '../components/CvPage.vue'
 import Projects from '../components/Projects.vue'
 import UiProjects from '../components/UiProjects.vue'
 import Info from "../components/Info.vue"
+import Main from "../components/Main.vue"
 
 </script>
 
 <template>
   <v-container fluid>
     <div class="part-height">
+      <Main />
     </div>
     <div id="about" class="part-height">
       <Info />
