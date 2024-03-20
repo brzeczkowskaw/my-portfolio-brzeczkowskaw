@@ -83,6 +83,6 @@ p {
 }
 .chip-class {
   background: rgb(var(--v-theme-background));
-  font-family: "special Elite"
+  font-family: "Special Elite"
 }
 </style>

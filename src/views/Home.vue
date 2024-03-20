@@ -5,12 +5,17 @@ import Contact from '../components/Contact.vue'
 import CvPage from '../components/CvPage.vue'
 import Projects from '../components/Projects.vue'
 import UiProjects from '../components/UiProjects.vue'
+import Info from "../components/Info.vue"
 
 </script>
 
 <template>
   <v-container fluid>
-    <div class="part-height">info</div>
+    <div class="part-height">
+    </div>
+    <div id="about" class="part-height">
+      <Info />
+    </div>
     <div id="cv" class="part-height">
       <CvPage />
     </div>

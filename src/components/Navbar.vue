@@ -18,6 +18,27 @@ import { ref } from 'vue'
         </ul>
       </div>
     </v-app-bar>
+    <!-- <v-app-bar color="background" elevation="0">
+      <v-spacer />
+      <div>
+        <v-app-bar-nav-icon @click="isSidebarOpen = !isSidebarOpen"/>
+      </div>
+    </v-app-bar>
+    <v-navigation-drawer 
+      v-model="isSidebarOpen" 
+      floating
+      color="background"
+      width="100%"
+    >
+      <ul class="nav">
+        <li><a href="#about">About</a></li>
+        <li><a href="#cv">CV</a></li>
+        <li><a href="#tools">Tools</a></li>
+        <li><a href="#page-projects">Projects</a></li>
+        <li><a href="#ui-projects">UI projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </v-navigation-drawer> -->
   </v-container>
 </template>
 
