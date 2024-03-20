@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { tools } from '../variables/tools'
 import { ref } from 'vue'
 import { 
   education, 
@@ -8,13 +7,13 @@ import {
   languages,
   certificates
 } from '../variables/experience'
-import { findFlagUrlByCountryName, countries } from "country-flags-svg";
+import { findFlagUrlByCountryName } from "country-flags-svg";
 
 const tab = ref();
 
-function getDifference(startDate: string, endDate: string) {
-  const start = new Date(startDate);
-  const end = endDate ? new Date(endDate) : new Date();
+function getDifference(startDate: any, endDate: any) {
+  const start = new Date(startDate) as any;
+  const end = endDate ? new Date(endDate) : new Date() as any;
 
   const timeDifference = end - start;
   const millisecondsInYear = 1000 * 60 * 60 * 24 * 365.25;
@@ -24,7 +23,7 @@ function getDifference(startDate: string, endDate: string) {
   return years + " yrs, " + months + " mths";
 }
 
-function formatDate(date: string) {
+function formatDate(date: string | null) {
   if (!date) return 'Present';
   const fullDate = new Date(date);
   const monthNames = [
