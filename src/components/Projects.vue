@@ -74,7 +74,7 @@ function nextPic() {
         </v-col>
         <v-col class="my-5">
           <v-img 
-            :src="`public/assets/${item.photos[0]}.jpg`"
+            :src="`./assets/${item.photos[0]}.jpg`"
             class="picture"
             @click="openPicturesDialog(item.photos)"
           />
@@ -106,7 +106,7 @@ function nextPic() {
     </v-card>
     <v-dialog v-model="isDialogOpen">
       <v-card class="pa-4 text-center">
-        <v-img :src="`public/assets/${pictures[index]}.jpg`" />
+        <v-img :src="`./assets/${pictures[index]}.jpg`" />
         <div class="mt-2">
           <v-icon 
             color="secondary"
