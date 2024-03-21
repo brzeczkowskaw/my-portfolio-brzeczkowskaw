@@ -20,7 +20,7 @@ import { about } from "../variables/aboutMe"
       </v-card-text>
     </v-card>
       <v-img 
-        :src="`public/assets/${about.photo}.jpg`"
+        :src="`./assets/${about.photo}.jpg`"
         class="photo"
       />
   </v-container>

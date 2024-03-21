@@ -110,7 +110,7 @@ function formatDate(date: string | null) {
                     class="ma-0 pa-6"
                   >
                     <v-img 
-                      :src="`public/assets/${item.logo}.jpg`" 
+                      :src="`./assets/${item.logo}.jpg`" 
                       class="logo"
                     />
                   </v-col>
@@ -142,7 +142,7 @@ function formatDate(date: string | null) {
                     class="ma-0 pa-6"
                   >
                     <v-img 
-                      :src="`public/assets/${item.logo}.jpg`" 
+                      :src="`./assets/${item.logo}.jpg`" 
                       class="logo"
                     />
                   </v-col>
