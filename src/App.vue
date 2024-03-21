@@ -14,7 +14,7 @@ import Navbar from './components/Navbar.vue'
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Mallanna&family=Squada+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=GFS+Didot&family=Mallanna&family=Squada+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=GFS+Didot&family=Headland+One&family=Mallanna&family=Saira+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Special+Elite&family=Squada+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=GFS+Didot&family=Mallanna&family=Special+Elite&family=Squada+One&display=swap');
 
 h2,
@@ -22,7 +22,7 @@ h3 {
   font-family: "Mallana"
 }
 p {
-  font-family: "Squada One"
+  font-family: "Saira Semi Condensed"
 }
 
 #app {

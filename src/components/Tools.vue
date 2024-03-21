@@ -10,12 +10,12 @@ import { tools } from '../variables/tools'
         mdi-star-outline
       </v-icon>
       Tools I use
-      <hr class="ml-4" style="width: 60%" size="1" />  
     </h2>
     <v-card 
       class="pa-4 mx-5 my-10 text-center" 
       color="background"
       elevation="8"
+      width="80vw"
     >
       <div class="my-8">
         <v-card 

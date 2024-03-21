@@ -49,7 +49,7 @@ export const experience = [
       "Responsive Design for web applications",
       "Designing UI for new features",
       "Version control with Gitlab",
-      "Testing, and debugging applications",
+      "Testing and debugging applications",
       "Maintaining and refactoring existing code",
       "Keeping in touch with back end developers and buissness to consult the project",
       "Working in product and project approach",

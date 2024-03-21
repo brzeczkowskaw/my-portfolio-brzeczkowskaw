@@ -34,9 +34,9 @@ import Main from "../components/Main.vue"
     </div>
     <v-footer
       color="background"
-      class="d-flex justify-end mr-5"
+      class="d-flex justify-end mr-3"
     >
-      <p>Made with </p><p class="heart mx-3"> &#10084; </p> <p> by <a href="https://brzeczkowskaw.netlify.app/#/" target="_blank">Weronika Brzeczkowska-Kuzianik</a></p>
+      <p>Made with </p><p class="heart mx-3"> &#10084; </p> <p> by <a href="https://weronikabrzeczkowska.netlify.app/#/" target="_blank">Weronika</a></p>
     </v-footer>
   </v-container>
 </template>

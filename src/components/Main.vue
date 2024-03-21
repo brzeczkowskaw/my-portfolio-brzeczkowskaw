@@ -1,5 +1,10 @@
 <script setup lang="ts">
 import { about } from "../variables/aboutMe"
+import { computed } from "vue"
+
+const isScreenBig = computed(() => {
+  return window.screen.availWidth > 750;
+})
 </script>
 
 <template>
@@ -11,7 +16,7 @@ import { about } from "../variables/aboutMe"
     <v-card 
       color="background" 
       elevation="0" 
-      width="70%" 
+      :width="isScreenBig ? '70%' : '90%'" 
       class="pa-5"
     >
       <v-card-text>

@@ -10,7 +10,6 @@ import { contacts } from '../variables/contact'
         mdi-star-outline
       </v-icon>
       Let's get in touch!
-      <hr class="ml-4" style="width: 50%" size="1" />  
     </h2>
     <div class="d-flex justify-center contact-list">
       <ul>
@@ -63,6 +62,17 @@ ul li a {
   font-size: 30px;
   color: rgb(var(--v-theme-secondary));
   transition: .9s;
+}
+@media(max-width: 480px) {
+  ul li a  {
+    width: 60px;
+    height: 60px;
+    line-height: 55px;
+  }
+  .contact-list {
+    padding-top: 30vh;
+    padding-bottom: 30vh;
+  }
 }
 ul li a::before {
   content: '';

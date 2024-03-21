@@ -1,48 +1,95 @@
 <script setup lang="ts">
+import { computed, ref } from 'vue'
+
+const isSidebarOpen = ref(false);
+const isScreenBig = computed(() => {
+  return window.screen.availWidth > 750;
+})
+
+const listItems = [
+  {
+    title: 'About',
+    props: {
+      to: '#about',
+    },
+  },
+  {
+    title: 'CV',
+    props: {
+      to: '#cv',
+    },
+  },
+  {
+    title: 'Tools',
+    props: {
+      to: '#tools',
+    },
+  },
+  {
+    title: 'Projects',
+    props: {
+      to: '#page-projects',
+    },
+  },
+  {
+    title: 'UI projects',
+    props: {
+      to: '#ui-projects',
+    },
+  },
+  {
+    title: 'Contact',
+    props: {
+      to: '#contact',
+    },
+  },
+]
 </script>
 
 <template>
   <v-container fluid>
-    <v-app-bar color="background" elevation="0">
+    <v-app-bar v-if="isScreenBig" color="background" elevation="0">
       <v-spacer />
       <div>
         <ul class="nav">
-          <li><a href="#about">About</a></li>
-          <li><a href="#cv">CV</a></li>
-          <li><a href="#tools">Tools</a></li>
-          <li><a href="#page-projects">Projects</a></li>
-          <li><a href="#ui-projects">UI projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li v-for="item in listItems" :key="item.title">
+            <a :href="item.props.to">{{ item.title }}</a>
+          </li>
         </ul>
       </div>
     </v-app-bar>
-    <!-- <v-app-bar color="background" elevation="0">
-      <v-spacer />
-      <div>
-        <v-app-bar-nav-icon @click="isSidebarOpen = !isSidebarOpen"/>
-      </div>
+    <v-app-bar 
+      v-else 
+      prominent 
+      density="compact" 
+      color="background"
+      elevation="0"
+    >
+      <v-app-bar-nav-icon @click="isSidebarOpen = !isSidebarOpen"/>
     </v-app-bar>
-    <v-navigation-drawer 
+    <v-navigation-drawer
       v-model="isSidebarOpen" 
       floating
       color="background"
       width="100%"
+      class="nav-side-bar"
     >
       <ul class="nav">
-        <li><a href="#about">About</a></li>
-        <li><a href="#cv">CV</a></li>
-        <li><a href="#tools">Tools</a></li>
-        <li><a href="#page-projects">Projects</a></li>
-        <li><a href="#ui-projects">UI projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li v-for="item in listItems" :key="item.title">
+          <a :href="item.props.to">{{ item.title }}</a>
+        </li>
       </ul>
-    </v-navigation-drawer> -->
+    </v-navigation-drawer>
   </v-container>
 </template>
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,600');
 
+:deep(.drawer-items .v-list-item-title) {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
 .nav {
   font-family: 'Titillium Web';
   text-transform: uppercase;
@@ -98,5 +145,10 @@
 }
 .nav a:hover {
   color: rgb(var(--v-theme-secondary));
+}
+@media(max-width: 750px) {
+  .nav-side-bar {
+    width: 100%;
+  }
 }
 </style>

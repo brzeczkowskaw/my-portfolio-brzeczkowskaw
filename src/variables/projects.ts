@@ -1,7 +1,7 @@
 export const projects = [
   {
     name: "Which pizza",
-    text: "which-pizza is an app to compare pizza sizes and prices. If wondering which pizza combinations in better price value, you can just fill in the form with diameter, amount and prices of pizza. App is counting total area of both options and price per square area as well as choosing which is more worthy. User can also choose they measure unit (centimeters or inches) and local currency. App is using free API to get all actual currencies. This simple one-pager application is fully responsive.",
+    text: "Which-Pizza is a user-friendly app for comparing pizza sizes and prices. Input the diameter, quantity, and prices to find the best value. The app calculates total area and price per square unit to help you decide. Customize units and currency, with up-to-date rates from a free API. Fully responsive for easy use on any device.",
     subtext: null,
     points: null,
     demo: "https://which-pizza-app.netlify.app/",
@@ -22,7 +22,7 @@ export const projects = [
   },
   {
     name: "Cocktail wizard",
-    text: "cocktail-wizard app allows you to find cocktail recepies. On main page, you receive random cocktails. You can search cockatils for several categories: name, ingredient, alcohol content, category, glass. After choosing the cocktail, you will receive details about it: picture, ingredients, tags and preparation.",
+    text: "Cocktail Wizard is your go-to app for discovering cocktail recipes. Upon landing on the main page, you're greeted with a selection of random cocktails. Dive deeper by searching for cocktails based on various categories such as name, ingredient, alcohol content, category, or glass type. Once you've selected a cocktail, you'll receive comprehensive details including a picture, ingredients, tags, and preparation instructions. Cheers to your next perfect drink!",
     subtext: "You can login to get additional features:",
     points: [
       "save cocktails to your favourite list",

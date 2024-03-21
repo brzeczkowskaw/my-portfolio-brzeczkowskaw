@@ -44,12 +44,12 @@ function formatDate(date: string | null) {
         mdi-star-outline
       </v-icon>
       My experience
-      <hr class="ml-4" style="width: 60%" size="1" />  
     </h2>
     <v-card 
       class="py-4 px-0 mx-5 my-10" 
       color="background"
       elevation="0"
+      width="80vw"
     >
       <v-row>
         <v-col cols="12" sm="4">
