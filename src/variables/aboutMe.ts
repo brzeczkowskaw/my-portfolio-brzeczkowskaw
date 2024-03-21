@@ -1,13 +1,15 @@
 export const about = {
-  text: "Hello! My name is Weronika, frond end developer based in The Netherlands",
+  text: "Hello! My name is Weronika, Front End Developer based in the Netherlands",
   text2:
-    "My career started in Poland in hospitality industry. For six years I was working in five star hotel as Reservation Agent and Marketing & PR specialist. After moving to the Netherlands, I decided to change my career and follow my passion. I started to learn programming on my own, followed with bootcamp. Now I work as frond end developer.",
+    "Originating in Poland's hospitality sector, I honed my craft for six years at a renowned five-star hotel, specializing in reservations and marketing. Upon relocating to the Netherlands, I pursued my passion for programming. Through self-learning and a bootcamp, I transitioned into a successful career as a Front End Developer, crafting compelling digital experiences.",
   text3:
-    "I'm passionate about crafting visually stunning and user-friendly interfaces. With expertise in HTML, CSS, JavaScript, and Vue I excel in translating designs into intuitive and responsive layouts. My focus on understanding end-user needs ensures exceptional usability and accessibility. Continuously learning and adapting to new technologies, I stay at the forefront of industry trends. I'm driven by the satisfaction of seeing my creations come to life and making a meaningful impact on users' experiences.",
+    "I'm deeply passionate about designing visually captivating and intuitive interfaces. Proficient in HTML, CSS, JavaScript, and Vue, I specialize in transforming designs into seamless, responsive layouts. My dedication to comprehending user requirements ensures exceptional usability and accessibility. Continuously evolving with emerging technologies, I remain at the vanguard of industry trends. The joy of witnessing my creations come to fruition and positively impacting user experiences propels my drive forward.",
   text4:
-    "In my free time I love backpacking and exploring the world. I love sailing, snowboarding, and going for concerts or parties with my friends. What calms me down is spending quiet evenings with my beloved husband and two lovely cats. We enjoy cooking together and exploring new recepies from around the world.",
+    "During my leisure time, I indulge in backpacking adventures and global exploration. I find solace in sailing, exhilaration in snowboarding, and joy in attending concerts and social gatherings with friends. Yet, my true serenity lies in quiet evenings shared with my beloved husband and our two cherished cats. Together, we delight in culinary explorations, discovering new recipes from diverse cultures around the world.",
   photo: "Weronika",
   name: "Weronika Brzęczkowska-Kuzianik",
-  mainText: "I'm front end developer based in the Netherlands. I build and ocassionaly design web pages to make people happy.",
-  mainText2: "I'm currently open to new opportunities and eager to connect with like-minded professionals in the industry. Whether it's discussing potential collaborations, job opportunities, or simply exchanging ideas, I welcome the chance to network and explore new possibilities. Feel free to reach out to me—I'm excited to engage with fellow enthusiasts and expand my professional horizons.",
+  mainText:
+    "I'm a Front End Developer based in the Netherlands. My mission is to create web pages that not only function flawlessly but also bring joy to users. While my primary focus is on development, I also dabble in design from time to time.",
+  mainText2:
+    "I'm actively seeking new opportunities and excited to connect with fellow professionals in the industry. Whether it's exploring potential collaborations, discussing job opportunities, or simply exchanging ideas, I'm eager to network and expand my horizons. Don't hesitate to reach out—I look forward to engaging with like-minded enthusiasts and discovering new possibilities together.",
 };

@@ -9,14 +9,13 @@ import { about } from "../variables/aboutMe"
         mdi-star-outline
       </v-icon>
       Let's meet!
-      <hr class="ml-4" style="width: 50%" size="1" />  
     </h2>
     <v-card color="background" elevation="0" class="pa-3">
       <v-card-text>
-        <p class="mb-2">{{ about.text }}</p>
-        <p class="mb-2">{{ about.text2 }}</p> 
-        <p class="mb-2">{{ about.text3 }}</p> 
-        <p class="mb-2">{{ about.text4 }}</p> 
+        <p class="mb-2 text-justify">{{ about.text }}</p>
+        <p class="mb-2 text-justify">{{ about.text2 }}</p> 
+        <p class="mb-2 text-justify">{{ about.text3 }}</p> 
+        <p class="mb-2 text-justify">{{ about.text4 }}</p> 
       </v-card-text>
     </v-card>
       <v-img 

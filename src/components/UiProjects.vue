@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { uiProjects } from '../variables/uiProjects'
+import { computed } from 'vue'
 
+const isScreenBig = computed(() => {
+  return window.screen.availWidth > 750;
+})
 </script>
 
 <template>
@@ -9,8 +13,7 @@ import { uiProjects } from '../variables/uiProjects'
       <v-icon size="small" color="secondary" class="mr-5">
         mdi-star-outline
       </v-icon>
-      My UI works
-      <hr class="ml-4" style="width: 50%" size="1" />  
+      My UI projects
     </h2>
     <v-card
       v-for="(item, index) in uiProjects" 
@@ -21,7 +24,7 @@ import { uiProjects } from '../variables/uiProjects'
       width="auto"
     >
       <v-row>
-        <v-col class="my-5" align="center">
+        <v-col v-if="isScreenBig" class="my-5" align="center">
           <v-img 
             :src="`./assets/${item.photo}.jpg`"
             class="picture"
@@ -54,6 +57,12 @@ import { uiProjects } from '../variables/uiProjects'
             </a>
           </v-row>
         </v-col>
+        <v-col v-if="!isScreenBig" class="mb-5" align="center">
+          <v-img 
+            :src="`./assets/${item.photo}.jpg`"
+            class="picture"
+          />
+        </v-col>
       </v-row>
     </v-card>
   </v-container>
@@ -65,7 +74,7 @@ h3 {
   font-family: "Mallana"
 }
 p {
-  font-family: "Squada One"
+  font-family: "Saira Semi Condensed"
 }
 .picture {
   border: 1px solid rgb(var(--v-theme-secondary));

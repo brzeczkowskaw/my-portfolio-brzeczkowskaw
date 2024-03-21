@@ -1,33 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
 import { projects } from '../variables/projects'
-
-const isDialogOpen = ref(false);
-const pictures = ref();
-const index = ref(0)
-
-function openPicturesDialog(pics: string[]) {
-  pictures.value = pics;
-  isDialogOpen.value = true;
-}
-
-function prevPic() {
-  const maxIndex = pictures.value.length - 1;
-  if (index.value === 0) {
-    index.value = maxIndex;
-    return;
-  }
-  index.value = index.value - 1;
-}
-
-function nextPic() {
-  const maxIndex = pictures.value.length - 1;
-  if (index.value === maxIndex) {
-    index.value = 0;
-    return;
-  }
-  index.value = index.value + 1;
-}
 
 </script>
 
@@ -37,8 +9,7 @@ function nextPic() {
       <v-icon size="small" color="secondary" class="mr-5">
         mdi-star-outline
       </v-icon>
-      My works
-      <hr class="ml-4" style="width: 50%" size="1" />  
+      My projects
     </h2>
     <v-card
       v-for="(item, index) in projects" 
@@ -46,7 +17,7 @@ function nextPic() {
       color="background"
       elevation="0"
       class="ma-2 pa-2"
-      width="auto"
+      width="70vw"
     >
       <v-row>
         <v-col>
@@ -76,7 +47,6 @@ function nextPic() {
           <v-img 
             :src="`./assets/${item.photos[0]}.jpg`"
             class="picture"
-            @click="openPicturesDialog(item.photos)"
           />
           <div class="mt-3">
             <v-chip 
@@ -104,27 +74,6 @@ function nextPic() {
         </v-col>
       </v-row>
     </v-card>
-    <v-dialog v-model="isDialogOpen">
-      <v-card class="pa-4 text-center">
-        <v-img :src="`./assets/${pictures[index]}.jpg`" />
-        <div class="mt-2">
-          <v-icon 
-            color="secondary"
-            @click="prevPic"
-            size="large"
-          >
-            mdi-menu-left-outline
-          </v-icon>
-          <v-icon 
-            color="secondary"
-            @click="nextPic"
-            size="large"
-          >
-            mdi-menu-right-outline
-          </v-icon>
-        </div>
-      </v-card>
-    </v-dialog>
   </v-container>
 </template>
 
@@ -134,13 +83,12 @@ h3 {
   font-family: "Mallana"
 }
 p {
-  font-family: "Squada One"
+  font-family: "Saira Semi Condensed"
 }
 .picture {
   border: 1px solid rgb(var(--v-theme-secondary));
   box-shadow: 0 0 10px rgb(var(--v-theme-primary));
   margin-top: 3em;
-  cursor: pointer;
 }
 .link-icon {
   color: rgb(var(--v-theme-primary));
