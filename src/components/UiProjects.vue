@@ -69,12 +69,11 @@ const isScreenBig = computed(() => {
 </template>
 
 <style scoped>
-h2,
-h3 {
-  font-family: "Mallana"
+p, h2, h3, h1 {
+  font-family: "Saira Semi Condensed"
 }
 p {
-  font-family: "Saira Semi Condensed"
+  font-size: 1.1rem;
 }
 .picture {
   border: 1px solid rgb(var(--v-theme-secondary));

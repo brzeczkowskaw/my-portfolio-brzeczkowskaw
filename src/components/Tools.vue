@@ -9,7 +9,7 @@ import { tools } from '../variables/tools'
       <v-icon size="small" color="secondary" class="mr-5">
         mdi-star-outline
       </v-icon>
-      Tools I use
+      Tools
     </h2>
     <v-card 
       class="pa-4 mx-5 my-10 text-center" 
@@ -38,10 +38,10 @@ import { tools } from '../variables/tools'
 @import url('https://fonts.googleapis.com/css2?family=Mallanna&family=Squada+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=GFS+Didot&family=Mallanna&family=Squada+One&display=swap');
 
-h2 {
-  font-family: "Mallana"
+p, h2, h3, h1 {
+  font-family: "Saira Semi Condensed"
 }
 p {
-  font-family: "GFS Didot"
+  font-size: 1.1rem;
 }
 </style>

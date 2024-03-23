@@ -41,12 +41,10 @@ const isScreenBig = computed(() => {
 </template>
 
 <style scoped>
-h2,
-h3 {
-  font-family: "Mallana"
+p, h2, h3, h1 {
+  font-family: "Saira Semi Condensed"
 }
 p {
-  font-family: "Mallana";
   font-size: 1.1rem;
 }
 h1 {

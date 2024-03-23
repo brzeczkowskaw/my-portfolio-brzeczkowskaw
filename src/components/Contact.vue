@@ -28,7 +28,7 @@ import { contacts } from '../variables/contact'
         <v-icon class="mr-2" size="small" color="primary">mdi-phone</v-icon><p class="mr-2">Phone number: </p>+31 617278642
       </div>
       <div class="d-flex justify-end mr-5">
-        <v-icon class="mr-2" size="small" color="primary">mdi-map-marker</v-icon><p class="mr-2">Location: </p>Vianen, Utrecht
+        <v-icon class="mr-2" size="small" color="primary">mdi-map-marker</v-icon><p class="mr-2">Location: </p>Utrecht
       </div>
     </div>
   </v-container>
@@ -39,8 +39,8 @@ import { contacts } from '../variables/contact'
   padding-top: 30vh;
   padding-bottom: 35vh;
 }
-h2 {
-  font-family: "Mallana"
+p, h2, h3 {
+  font-family: "Saira Semi Condensed"
 }
 ul {
   margin: 0;
