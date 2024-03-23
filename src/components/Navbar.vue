@@ -48,6 +48,7 @@ const listItems = [
 
 <template>
   <v-container fluid>
+    {{ isScreenBig }}
     <v-app-bar v-if="isScreenBig" color="background" elevation="0">
       <v-spacer />
       <div>
@@ -75,7 +76,7 @@ const listItems = [
       class="nav-side-bar"
     >
       <ul class="nav">
-        <li v-for="item in listItems" :key="item.title">
+        <li v-for="item in listItems" :key="item.title" @click="isSidebarOpen = !isSidebarOpen" >
           <a :href="item.props.to">{{ item.title }}</a>
         </li>
       </ul>

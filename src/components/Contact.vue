@@ -37,7 +37,7 @@ import { contacts } from '../variables/contact'
 <style scoped>
 .contact-list {
   padding-top: 30vh;
-  padding-bottom: 20vh;
+  padding-bottom: 35vh;
 }
 h2 {
   font-family: "Mallana"

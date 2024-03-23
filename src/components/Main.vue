@@ -16,8 +16,8 @@ const isScreenBig = computed(() => {
     <v-card 
       color="background" 
       elevation="0" 
-      :width="isScreenBig ? '70%' : '90%'" 
-      class="pa-5"
+      :width="isScreenBig ? '70%' : '95%'" 
+      :class="isScreenBig ? 'pa-5' : 'py-5'"
     >
       <v-card-text>
         <p class="main-text mb-3 text-justify">
@@ -63,5 +63,11 @@ h1 {
 .main-text {
   font-size: 1.3rem;
   line-height: 1.5rem;
+}
+@media(max-width: 750px) {
+  .main-text {
+    font-size: 1.1rem;
+    line-height: 1.2rem;
+  }
 }
 </style>

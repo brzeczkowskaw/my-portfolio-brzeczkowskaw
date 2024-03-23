@@ -133,7 +133,7 @@ function formatDate(date: string | null) {
                 :key="index"
                 color="background"
                 elevation="0"
-                class="ma-0 pa-0"
+                class="ma-0 pa-0 px-2"
                 width="auto"
               >
                 <v-row>
@@ -161,12 +161,9 @@ function formatDate(date: string | null) {
                   </v-col>
                 </v-row>
                 <v-row class="mb-3">
-                  <v-card-text>
+                  <v-card-text class="text-justify">
                     <ul>
                       <li v-for="text in item.work" :key="text">
-                        <v-icon size="x-small">
-                          mdi-circle-small
-                        </v-icon>
                         {{text}}
                       </li>
                     </ul>
@@ -214,7 +211,7 @@ function formatDate(date: string | null) {
                   {{ item.location }} / 
                   {{ formatDate(item.start) }} - {{ formatDate(item.end) }}
                 </v-card-subtitle>
-                <v-card-text class="mb-4">
+                <v-card-text class="mb-4 text-justify">
                   {{ item.text }}
                 </v-card-text>
               </v-card>
@@ -225,7 +222,7 @@ function formatDate(date: string | null) {
                 :key="index"
                 color="background"
                 elevation="0"
-                class="ma-0 pa-0"
+                class="ma-0 pa-0 pl-2"
                 width="auto"
               >
                 <v-row class="mb-3">
