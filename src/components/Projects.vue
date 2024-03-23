@@ -17,13 +17,13 @@ import { projects } from '../variables/projects'
       color="background"
       elevation="0"
       class="ma-2 pa-2"
-      width="70vw"
+      width="80vw"
     >
       <v-row>
-        <v-col>
+        <v-col cols="12" sm="6">
           <p class="text-primary">Project</p>
           <h3>{{ item.name }}</h3>
-          <v-card color="tertiary" class="ma-3 pa-5" width="350" elevation="6">
+          <v-card color="tertiary" class="ma-3 pa-5" elevation="6">
             <p>
               {{ item.text }}
             </p>
