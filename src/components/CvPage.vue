@@ -106,7 +106,8 @@ function formatDate(date: string | null) {
                 </v-card-title>
                 <v-row>
                   <v-col 
-                    cols="3" 
+                    cols="3"
+                    md="2" 
                     class="ma-0 pa-6"
                   >
                     <v-img 
@@ -138,7 +139,8 @@ function formatDate(date: string | null) {
               >
                 <v-row>
                   <v-col
-                    cols="3" 
+                    cols="3"
+                    md="2" 
                     class="ma-0 pa-6"
                   >
                     <v-img 
@@ -161,7 +163,7 @@ function formatDate(date: string | null) {
                   </v-col>
                 </v-row>
                 <v-row class="mb-3">
-                  <v-card-text class="text-justify">
+                  <v-card-text class="text-justify ml-3">
                     <ul>
                       <li v-for="text in item.work" :key="text">
                         {{text}}
@@ -247,11 +249,8 @@ function formatDate(date: string | null) {
 @import url('https://fonts.googleapis.com/css2?family=Mallanna&family=Squada+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=GFS+Didot&family=Mallanna&family=Squada+One&display=swap');
 
-h2 {
-  font-family: "Mallana"
-}
-p {
-  font-family: "GFS Didot"
+p, h2, h3 {
+  font-family: "Saira Semi Condensed"
 }
 .v-card-title {
   font-family: "Mallana";
@@ -263,7 +262,7 @@ p {
   font-size: 0.8em;
 }
 .v-card-text {
-  font-family: "GFS Didot";
+  font-family: "Saira Semi Condensed";
 }
 .experience-card {
   max-height: 65vh;
@@ -273,8 +272,8 @@ p {
 }
 .logo {
   border-radius: 50%;
-  width: 4rem;
-  height: 4rem;
+  width: 4em;
+  height: 4em;
 }
 .language {
   border-radius: 50%;

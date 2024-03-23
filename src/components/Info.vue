@@ -18,28 +18,26 @@ import { about } from "../variables/aboutMe"
         <p class="mb-2 text-justify">{{ about.text4 }}</p> 
       </v-card-text>
     </v-card>
+    <div align="center">
       <v-img 
         :src="`./assets/${about.photo}.jpg`"
         class="photo"
       />
+    </div>
   </v-container>
 </template>
 
 <style scoped>
-h2,
-h3 {
-  font-family: "Mallana"
+p, h2, h3, h1 {
+  font-family: "Saira Semi Condensed"
 }
 p {
-  font-family: "Mallana";
   font-size: 1.1rem;
-}
-h1 {
-  font-family: "Special Elite"
 }
 .photo {
   height: 15em;
-  border-radius: 50px;
+  max-width: 11em;
+  border-radius: 20px;
   opacity: 0.5;
 }
 .photo:hover {

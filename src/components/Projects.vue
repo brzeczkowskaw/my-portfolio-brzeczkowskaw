@@ -78,11 +78,7 @@ import { projects } from '../variables/projects'
 </template>
 
 <style scoped>
-h2,
-h3 {
-  font-family: "Mallana"
-}
-p {
+p, h2, h3 {
   font-family: "Saira Semi Condensed"
 }
 .picture {

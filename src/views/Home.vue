@@ -42,11 +42,6 @@ import Main from "../components/Main.vue"
 </template>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=GFS+Didot&family=Mallanna&family=Squada+One&display=swap');
-
-p {
-  font-family: "GFS Didot"
-}
 .part-height {
   min-height: 100vh;
   padding-top: 20px;
