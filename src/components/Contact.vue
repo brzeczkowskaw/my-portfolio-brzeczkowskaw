@@ -11,14 +11,25 @@ import { contacts } from '../variables/contact'
       </v-icon>
       Let's get in touch!
     </h2>
-    <div class="d-flex justify-center contact-list">
-      <ul>
-        <li v-for="contact in contacts" :key="contact.address">
-          <a :href="contact.address" target="_blank">
-            <v-icon>{{ contact.icon }}</v-icon>
-          </a>
-        </li>
-      </ul>
+    <div class="contact-list">
+      <div class="d-flex justify-center">
+        <ul>
+          <li v-for="contact in contacts.slice(0, 3)" :key="contact.address">
+            <a :href="contact.address" target="_blank">
+              <v-icon>{{ contact.icon }}</v-icon>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-flex justify-center">
+        <ul>
+          <li v-for="contact in contacts.slice(3, 6)" :key="contact.address">
+            <a :href="contact.address" target="_blank">
+              <v-icon>{{ contact.icon }}</v-icon>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
     <div>
       <div class="d-flex justify-end mr-5">
@@ -36,8 +47,8 @@ import { contacts } from '../variables/contact'
 
 <style scoped>
 .contact-list {
-  padding-top: 30vh;
-  padding-bottom: 35vh;
+  padding-top: 20vh;
+  padding-bottom: 20vh;
 }
 p, h2, h3 {
   font-family: "Saira Semi Condensed"
