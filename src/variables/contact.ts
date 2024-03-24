@@ -16,4 +16,9 @@ export const contacts = [
     address: "https://wa.me/+31617278642",
     icon: "mdi-whatsapp",
   },
+  {
+    address:
+      "https://www.flipsnack.com/569D75AA9F7/weronika-brz-czkowska-kuzianik-cv/full-view.html",
+    icon: "mdi-file-account",
+  },
 ];

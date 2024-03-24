@@ -97,7 +97,7 @@ export const experience = [
     title: "Senior Reservation Agent",
     work: [
       "Customer service",
-      "Managing Opera environment in Opera system and assisting guests until check-out",
+      "Managing Opera environment and assisting guests until check-out",
       "Prices and availability management at booking engines",
       "Managing no show reports",
       "Cooperating with tourism agencies for business and tourism group contracts",
