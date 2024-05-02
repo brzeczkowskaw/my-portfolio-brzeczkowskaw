@@ -18,7 +18,7 @@ export const contacts = [
   },
   {
     address:
-      "https://www.flipsnack.com/569D75AA9F7/weronika-brz-czkowska-kuzianik-cv/full-view.html",
+      "https://drive.google.com/file/d/16aj68qBkJncj13tq68L-0qsn4zErjS-o/view?usp=sharing",
     icon: "mdi-file-account",
   },
 ];
