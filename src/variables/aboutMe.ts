@@ -7,7 +7,7 @@ export const about = {
   text4:
     "During my leisure time, I indulge in backpacking adventures and global exploration. I find solace in sailing, exhilaration in snowboarding, and joy in attending concerts and social gatherings with friends. Yet, my true serenity lies in quiet evenings shared with my beloved husband and our two cherished cats. Together, we delight in culinary explorations, discovering new recipes from diverse cultures around the world.",
   photo: "Weronika",
-  name: "Weronika Brzęczkowska-Kuzianik",
+  name: "Weronika Brzeczkowska-Kuzianik",
   mainText:
     "I'm a Front End Developer based in the Netherlands. My mission is to create web pages that not only function flawlessly but also bring joy to users. While my primary focus is on development, I also dabble in design from time to time.",
   mainText2:
