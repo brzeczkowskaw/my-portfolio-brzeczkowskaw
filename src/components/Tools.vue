@@ -11,26 +11,27 @@ import { tools } from '../variables/tools'
       </v-icon>
       Tools
     </h2>
-    <v-card 
-      class="pa-4 mx-5 my-10 text-center" 
-      color="background"
-      elevation="8"
-      width="80vw"
-    >
-      <div class="my-8">
-        <v-card 
-          v-for="tool in tools" 
-          :key="tool.name"
-          class="d-inline-flex pa-3 ma-2 rounded-lg"
-          width="160"
-          color="primary"
-          elevation="10"
-        >
-          <v-icon class="mr-5">{{tool.icon}}</v-icon>
-          <p>{{ tool.name }}</p>
-        </v-card>
-      </div>
-    </v-card>
+    <div class="d-flex justify-center">
+      <v-card 
+        class="tools-card pa-4 mx-5 my-10 text-center" 
+        color="background"
+        elevation="8"
+      >
+        <div class="my-8">
+          <v-card 
+            v-for="tool in tools" 
+            :key="tool.name"
+            class="d-inline-flex pa-3 ma-2 rounded-lg"
+            width="160"
+            color="primary"
+            elevation="10"
+          >
+            <v-icon class="mr-5">{{tool.icon}}</v-icon>
+            <p>{{ tool.name }}</p>
+          </v-card>
+        </div>
+      </v-card>
+    </div>
   </v-container>
 </template>
 
@@ -43,5 +44,15 @@ p, h2, h3, h1 {
 }
 p {
   font-size: 1.1rem;
+}
+.tools-card {
+  width: 40vw;
+  margin-top: 3rem;
+}
+@media(max-width: 480px) {
+  .tools-card {
+    width: 90vw;
+    margin-top: 0;
+  }
 }
 </style>
