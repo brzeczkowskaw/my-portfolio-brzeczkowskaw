@@ -9,7 +9,7 @@ import {
 } from '../variables/experience'
 import { findFlagUrlByCountryName } from "country-flags-svg";
 
-const tab = ref();
+const tab = ref('education')
 
 function getDifference(startDate: any, endDate: any) {
   const start = new Date(startDate) as any;
@@ -38,252 +38,125 @@ function formatDate(date: string | null) {
 </script>
 
 <template>
-  <v-container fluid class="mt-7">
-    <h2 class="d-flex align-center">
-      <v-icon size="small" color="secondary" class="mr-5">
-        mdi-star-outline
-      </v-icon>
-      My experience
-    </h2>
-    <v-card 
-      class="py-4 px-0 mx-5 my-10" 
-      color="background"
-      elevation="0"
-      width="80vw"
-    >
-      <v-row>
-        <v-col cols="12" sm="4">
-          <v-tabs
-            v-model="tab"
-            color="primary"
-            direction="vertical"
-          >
-            <v-tab value="education">
-              <v-icon start>
-                mdi-school
-              </v-icon>
-              Education
-            </v-tab>
-            <v-tab value="experience">
-              <v-icon start>
-                mdi-briefcase
-              </v-icon>
-              Experience
-            </v-tab>
-            <v-tab value="certificates">
-              <v-icon start>
-                mdi-file-certificate
-              </v-icon>
-              Certificates
-            </v-tab>
-            <v-tab value="volunteering">
-              <v-icon start>
-                mdi-hand-heart
-              </v-icon>
-              Volunteering
-            </v-tab>
-            <v-tab value="languages">
-              <v-icon start>
-                mdi-translate-variant
-              </v-icon>
-              Languages
-            </v-tab>
-          </v-tabs>
-        </v-col>
-        <v-col class="px-0">
-          <v-window v-model="tab" class="experience-card">
-            <v-window-item value="education">
-              <v-card 
-                v-for="(item, index) in education" 
-                :key="index"
-                color="background"
-                elevation="0"
-                class="ma-0 pa-0"
-                width="auto"
-              >
-                <v-card-title>
-                  {{ item.school }}
-                </v-card-title>
-                <v-row>
-                  <v-col 
-                    cols="3"
-                    md="2" 
-                    class="ma-0 pa-6"
-                  >
-                    <v-img 
-                      :src="`./assets/${item.logo}.jpg`" 
-                      class="logo"
-                    />
-                  </v-col>
-                  <v-col class="ma-0 py-3 px-2">
-                    <v-card-subtitle>
-                      {{ item.location }}<br />
-                      {{ item.time }} - {{ item.degree }}
-                    </v-card-subtitle>
-                    <v-card-text class="mb-4">
-                      Subject: {{ item.subject }}<br />
-                      {{ item.comments }}
-                    </v-card-text>
-                  </v-col>
-                </v-row>
-              </v-card>
-            </v-window-item>
-            <v-window-item value="experience">
-              <v-card
-                v-for="(item, index) in experience" 
-                :key="index"
-                color="background"
-                elevation="0"
-                class="ma-0 pa-0 px-2"
-                width="auto"
-              >
-                <v-row>
-                  <v-col
-                    cols="3"
-                    md="2" 
-                    class="ma-0 pa-6"
-                  >
-                    <v-img 
-                      :src="`./assets/${item.logo}.jpg`" 
-                      class="logo"
-                    />
-                  </v-col>
-                  <v-col>
-                    <v-card-title>
-                      {{ item.company }}
-                    </v-card-title>
-                    <v-card-subtitle>
-                      {{ item.title }}<br />
-                      {{ formatDate(item.start) }} - {{ formatDate(item.end) }}
-                      <v-icon size="x-small">
-                        mdi-circle-small
-                      </v-icon>
-                      {{ getDifference(item.start, item.end) }}
-                    </v-card-subtitle>
-                  </v-col>
-                </v-row>
-                <v-row class="mb-3">
-                  <v-card-text class="text-justify ml-3">
-                    <ul>
-                      <li v-for="text in item.work" :key="text">
-                        {{text}}
-                      </li>
-                    </ul>
-                  </v-card-text>
-                </v-row>
-              </v-card>
-            </v-window-item>
-            <v-window-item value="certificates">
-              <v-card
-                v-for="(item, index) in certificates" 
-                :key="index"
-                color="background"
-                elevation="0"
-                class="ma-0 pa-0"
-                width="auto"
-              >
-                <v-card-title>
-                  {{ item.name }}
-                </v-card-title>
-                <v-card-subtitle>
-                  Issued by {{ item.from }} <br />
-                  {{ formatDate(item.issued) }}
-                </v-card-subtitle>
-                <v-card-text class="mb-4">
-                  <a class="certificate-link" :href="item.link" target="_blank">
-                    see certificate
-                  </a>
-                </v-card-text>
-              </v-card>
-            </v-window-item>
-            <v-window-item value="volunteering">
-              <v-card
-                v-for="(item, index) in volunteering" 
-                :key="index"
-                color="background"
-                elevation="0"
-                class="ma-0 pa-0"
-                width="auto"
-              >
-                <v-card-title>
-                  {{ item.company }}
-                </v-card-title>
-                <v-card-subtitle>
-                  <b>{{ item.role }}</b><br />
-                  {{ item.location }} / 
-                  {{ formatDate(item.start) }} - {{ formatDate(item.end) }}
-                </v-card-subtitle>
-                <v-card-text class="mb-4 text-justify">
-                  {{ item.text }}
-                </v-card-text>
-              </v-card>
-            </v-window-item>
-            <v-window-item value="languages">
-              <v-card
-                v-for="(item, index) in languages" 
-                :key="index"
-                color="background"
-                elevation="0"
-                class="ma-0 pa-0 pl-2"
-                width="auto"
-              >
-                <v-row class="mb-3">
-                  <v-col cols="3">
-                    <v-img class="language" :src="findFlagUrlByCountryName(item.country)" />
-                  </v-col>
-                  <v-col>
-                    <h2>{{ item.language }}</h2>
-                    <small>{{ item.level }}</small>
-                  </v-col>
-                </v-row>
-              </v-card>
-            </v-window-item>
-          </v-window>
-        </v-col>
-      </v-row>
-    </v-card>
-  </v-container>
+  <section class="w-full px-4 py-12 sm:py-20 max-w-6xl mx-auto pt-32 mt-5">
+    <div class="flex flex-col md:flex-row items-stretch justify-center gap-8">
+      <!-- Tabs (left column) -->
+      <div class="flex flex-col gap-2 md:gap-4 w-full md:w-64 mb-4 md:mb-0 z-10">
+        <button
+          v-for="t in [
+            { key: 'education', label: 'Education', icon: '🎓' },
+            { key: 'experience', label: 'Experience', icon: '💼' },
+            { key: 'certificates', label: 'Certificates', icon: '📜' },
+            { key: 'volunteering', label: 'Volunteering', icon: '🤝' },
+            { key: 'languages', label: 'Languages', icon: '🌍' }
+          ]"
+          :key="t.key"
+          @click="tab = t.key"
+          :class="[
+            'flex items-center gap-2 px-4 py-2 rounded-lg font-semibold transition-colors w-full md:w-full',
+            tab === t.key ? 'bg-primary text-neutral-900 shadow' : 'bg-neutral-800 text-gray-200 hover:bg-neutral-700'
+          ]"
+          style="min-width: 120px;"
+        >
+          <span class="text-xl">{{ t.icon }}</span>
+          <span>{{ t.label }}</span>
+        </button>
+      </div>
+      <!-- Content Card (right column) -->
+      <div class="flex-1 w-full bg-neutral-900 rounded-xl shadow p-6 md:p-8 h-[80vh] overflow-y-auto">
+        <!-- Education -->
+        <div v-if="tab === 'education'">
+          <h2 class="text-2xl font-bold mb-4 flex items-center gap-2"><span>🎓</span> Education</h2>
+          <div v-for="(item, index) in education" :key="index" class="rounded-lg border border-neutral-800 p-4 mb-4 flex flex-col md:flex-row gap-4 bg-neutral-900">
+            <img :src="`./assets/${item.logo}.jpg`" alt="logo" class="w-20 h-20 object-contain rounded-lg bg-neutral-800" />
+            <div class="flex-1">
+              <h3 class="text-xl font-bold mb-1">{{ item.school }}</h3>
+              <div class="text-gray-400 mb-2">{{ item.location }} &mdash; {{ item.time }} &mdash; {{ item.degree }}</div>
+              <div class="text-gray-300 mb-2">Subject: {{ item.subject }}</div>
+              <div class="text-gray-400 text-sm">{{ item.comments }}</div>
+            </div>
+          </div>
+        </div>
+        <!-- Experience -->
+        <div v-if="tab === 'experience'">
+          <h2 class="text-2xl font-bold mb-4 flex items-center gap-2"><span>💼</span> Experience</h2>
+          <div v-for="(item, index) in experience" :key="index" class="rounded-lg border border-neutral-800 p-4 mb-4 flex flex-col md:flex-row gap-4 bg-neutral-900">
+            <img :src="`./assets/${item.logo}.jpg`" alt="logo" class="w-20 h-20 object-contain rounded-lg bg-neutral-800" />
+            <div class="flex-1">
+              <h3 class="text-xl font-bold mb-1">{{ item.company }}</h3>
+              <div class="text-gray-400 mb-2">{{ item.title }}</div>
+              <div class="text-gray-400 mb-2">{{ formatDate(item.start) }} - {{ formatDate(item.end) }} <span class="ml-2 text-xs text-gray-500">({{ getDifference(item.start, item.end) }})</span></div>
+              <ul class="list-disc list-inside text-gray-300 text-sm space-y-1">
+                <li v-for="text in item.work" :key="text">{{ text }}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Certificates -->
+        <div v-if="tab === 'certificates'">
+          <h2 class="text-2xl font-bold mb-4 flex items-center gap-2"><span>📜</span> Certificates</h2>
+          <div v-for="(item, index) in certificates" :key="index" class="rounded-lg border border-neutral-800 p-4 mb-4 flex flex-col gap-2 bg-neutral-900">
+            <h3 class="text-lg font-bold">{{ item.name }}</h3>
+            <div class="text-gray-400">Issued by {{ item.from }} &mdash; {{ formatDate(item.issued) }}</div>
+            <a :href="item.link" target="_blank" class="text-primary underline hover:text-primary/80">see certificate</a>
+          </div>
+        </div>
+        <!-- Volunteering -->
+        <div v-if="tab === 'volunteering'">
+          <h2 class="text-2xl font-bold mb-4 flex items-center gap-2"><span>🤝</span> Volunteering</h2>
+          <div v-for="(item, index) in volunteering" :key="index" class="rounded-lg border border-neutral-800 p-4 mb-4 flex flex-col gap-2 bg-neutral-900">
+            <h3 class="text-lg font-bold">{{ item.company }}</h3>
+            <div class="text-gray-400">{{ item.location }} &mdash; {{ formatDate(item.start) }} - {{ formatDate(item.end) }} <span class="ml-2 text-xs text-gray-500">({{ getDifference(item.start, item.end) }})</span></div>
+            <div class="text-gray-300 font-semibold">{{ item.role }}</div>
+            <div class="text-gray-400 text-sm">{{ item.text }}</div>
+          </div>
+        </div>
+        <!-- Languages -->
+        <div v-if="tab === 'languages'">
+          <h2 class="text-2xl font-bold mb-4 flex items-center gap-2"><span>🌍</span> Languages</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <div v-for="(item, index) in languages" :key="index" class="rounded-lg border border-neutral-800 p-4 flex flex-col gap-1 bg-neutral-900">
+              <div class="flex items-center gap-2">
+                <img :src="findFlagUrlByCountryName(item.country)" :alt="`${item.country} flag`" class="w-6 h-4 object-cover rounded-sm" />
+                <span class="font-bold">{{ item.language }}</span>
+              </div>
+              <div class="text-gray-400 text-sm">{{ item.level }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Mallanna&family=Squada+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=GFS+Didot&family=Mallanna&family=Squada+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@400;700&display=swap');
+.font-sans {
+  font-family: 'Saira Semi Condensed', Arial, sans-serif;
+}
 
-p, h2, h3 {
-  font-family: "Saira Semi Condensed"
+/* Custom scrollbar styling */
+.overflow-y-auto::-webkit-scrollbar {
+  width: 8px;
 }
-.v-card-title {
-  font-family: "Mallana";
-  font-size: 1.1em;
-  line-height: 1.2em;
+
+.overflow-y-auto::-webkit-scrollbar-track {
+  background: #171717; /* neutral-900 */
+  border-radius: 4px;
 }
-.v-card-subtitle {
-  font-family: "GFS Didot";
-  font-size: 0.8em;
+
+.overflow-y-auto::-webkit-scrollbar-thumb {
+  background: #404040; /* neutral-700 */
+  border-radius: 4px;
 }
-.v-card-text {
-  font-family: "Saira Semi Condensed";
+
+.overflow-y-auto::-webkit-scrollbar-thumb:hover {
+  background: #525252; /* neutral-600 */
 }
-.experience-card {
-  max-height: 65vh;
-  overflow-y: auto;
-  scrollbar-width: 2px;
-  scrollbar-color: rgb(var(--v-theme-secondary)) rgb(var(--v-theme-tertiary));
-}
-.logo {
-  border-radius: 50%;
-  width: 4em;
-  height: 4em;
-}
-.language {
-  border-radius: 50%;
-  margin: 9px;
-  width: 50%;
-  box-shadow: 0 0 9px rgb(var(--v-theme-primary));
-}
-.certificate-link {
-  text-decoration: none;
-  color: rgb(var(--v-theme-secondary));
-  font-size: 1.3em;
+
+/* Firefox scrollbar */
+.overflow-y-auto {
+  scrollbar-width: thin;
+  scrollbar-color: #404040 #171717;
 }
 </style>

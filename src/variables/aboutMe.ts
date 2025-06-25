@@ -1,7 +1,7 @@
 export const about = {
-  text: "Hello! My name is Weronika, Front End Developer based in the Netherlands",
+  text: "👋 Hi, I’m Weronika",
   text2:
-    "Originating in Poland's hospitality sector, I honed my craft for six years at a renowned five-star hotel, specializing in reservations and marketing. Upon relocating to the Netherlands, I pursued my passion for programming. Through self-learning and a bootcamp, I transitioned into a successful career as a Front End Developer, crafting compelling digital experiences.",
+    "I'm a front-end developer with 4+ years of experience building fast, responsive, and user-friendly web applications. My main tools are Vue.js, Nuxt.js, React, and TypeScript—and I love crafting UI components that are not only visually appealing but also functional and maintainable.",
   text3:
     "I'm deeply passionate about designing visually captivating and intuitive interfaces. Proficient in HTML, CSS, JavaScript, and Vue, I specialize in transforming designs into seamless, responsive layouts. My dedication to comprehending user requirements ensures exceptional usability and accessibility. Continuously evolving with emerging technologies, I remain at the vanguard of industry trends. The joy of witnessing my creations come to fruition and positively impacting user experiences propels my drive forward.",
   text4:

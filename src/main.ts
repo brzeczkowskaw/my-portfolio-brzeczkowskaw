@@ -5,6 +5,7 @@ import App from "./App.vue";
 import "@mdi/font/css/materialdesignicons.css";
 import "@fortawesome/fontawesome-free/css/all.css";
 import VueScrollTo from "vue-scrollto";
+import "./assets/main.css";
 
 const pinia = createPinia();
 

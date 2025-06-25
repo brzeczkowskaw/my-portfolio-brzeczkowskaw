@@ -1,71 +1,68 @@
 <script setup lang="ts">
 import { uiProjects } from '../variables/uiProjects'
-import { computed } from 'vue'
 
-const isScreenBig = computed(() => {
-  return window.screen.availWidth > 750;
-})
 </script>
 
 <template>
-  <v-container fluid class="mt-7">
-    <h2 class="d-flex align-center">
-      <v-icon size="small" color="secondary" class="mr-5">
-        mdi-star-outline
-      </v-icon>
-      My UI projects
+  <section class="w-full px-4 py-12 sm:py-20 max-w-6xl mx-auto pt-32 mt-5">
+    <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
+      <span class="text-primary">⭐</span>
+      My UI Projects
     </h2>
-    <v-card
-      v-for="(item, index) in uiProjects" 
-      :key="index"
-      color="background"
-      elevation="0"
-      class="ma-2 pa-2"
-      width="auto"
-    >
-      <v-row>
-        <v-col v-if="isScreenBig" class="my-5" align="center">
-          <v-img 
-            :src="`./assets/${item.photo}.jpg`"
-            class="picture"
-          />
-        </v-col>
-        <v-col cols="12" sm="6">
-          <p class="text-primary">Project</p>
-          <h3>{{ item.name }}</h3>
-          <v-card color="tertiary" class="ma-3 pa-5" elevation="6">
-            <p>
-              {{ item.text }}
-            </p>
-          </v-card>
-          <div class="mt-3">
-          </div>
-          <v-row class="my-3 mr-2" justify="end">
-            <a :href="item.link" class="link-icon" target="_blank">
-              <v-chip 
-                label
-                class="ma-1 pa-0 chip-class"
-                density="comfortable"
+    
+    <div class="space-y-8">
+      <div 
+        v-for="(item, index) in uiProjects" 
+        :key="index"
+        class="bg-neutral-900 rounded-xl shadow-lg p-6 md:p-8"
+      >
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <!-- Project Info -->
+          <div class="space-y-4 order-2 lg:order-1">
+            <div>
+              <p class="text-primary font-medium mb-2">Project</p>
+              <h3 class="text-2xl font-bold text-white mb-4">{{ item.name }}</h3>
+            </div>
+            
+            <div class="bg-neutral-900 rounded-lg p-6 shadow-inner">
+              <p class="text-neutral-300 leading-relaxed text-lg">
+                {{ item.text }}
+              </p>
+            </div>
+            
+            <!-- Links -->
+            <div class="flex justify-end gap-4 pt-4">
+              <a 
+                :href="item.link" 
+                target="_blank"
+                class="px-3 py-1 bg-neutral-800 text-neutral-300 rounded-lg hover:bg-primary hover:text-neutral-900 transition-all duration-300 border border-neutral-700 hover:border-primary flex items-center justify-center"
               >
                 {{ item.tool.toUpperCase() }}
-              </v-chip>
-            </a>
-            <a :href="item.pdf" class="link-icon" target="_blank">
-              <v-icon size="x-large">
-                mdi-file-pdf-box
-              </v-icon>
-            </a>
-          </v-row>
-        </v-col>
-        <v-col v-if="!isScreenBig" class="mb-5" align="center">
-          <v-img 
-            :src="`./assets/${item.photo}.jpg`"
-            class="picture"
-          />
-        </v-col>
-      </v-row>
-    </v-card>
-  </v-container>
+              </a>
+              <a 
+                :href="item.pdf" 
+                target="_blank"
+                class="p-2 bg-neutral-800 rounded-lg hover:bg-primary hover:text-neutral-900 transition-all duration-300 group flex items-center justify-center"
+              >
+                <v-icon icon="mdi-file-pdf-box" size="large" class="group-hover:scale-110 transition-transform"></v-icon>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Project Image -->
+          <div class="flex justify-center items-center order-1 lg:order-2">
+            <div class="relative">
+              <img 
+                :src="`./assets/${item.photo}.jpg`"
+                :alt="item.name"
+                class="w-32 h-64 object-cover rounded-lg border-2 border-primary shadow-lg shadow-primary/20"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
 
 <style scoped>

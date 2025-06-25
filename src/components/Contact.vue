@@ -4,45 +4,68 @@ import { contacts } from '../variables/contact'
 </script>
 
 <template>
-  <v-container fluid class="mt-7">
-    <h2 class="d-flex align-center">
-      <v-icon size="small" color="secondary" class="mr-5">
-        mdi-star-outline
-      </v-icon>
+  <section class="w-full px-4 py-12 sm:py-20 max-w-6xl mx-auto pt-20 relative">
+    <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
+      <span class="text-primary">⭐</span>
       Let's get in touch!
     </h2>
-    <div class="contact-list">
-      <div class="d-flex justify-center">
-        <ul>
-          <li v-for="contact in contacts.slice(0, 3)" :key="contact.address">
-            <a :href="contact.address" target="_blank">
-              <v-icon>{{ contact.icon }}</v-icon>
-            </a>
-          </li>
-        </ul>
+    
+    <!-- Social Media Icons -->
+    <div class="py-12 sm:py-20">
+      <!-- First Row -->
+      <div class="flex justify-center mb-8">
+        <div class="flex gap-6">
+          <a 
+            v-for="contact in contacts.slice(0, 3)" 
+            :key="contact.address"
+            :href="contact.address" 
+            target="_blank"
+            class="w-20 h-20 sm:w-24 sm:h-24 bg-neutral-800 rounded-full flex items-center justify-center text-3xl text-neutral-300 hover:text-primary hover:shadow-lg hover:shadow-primary/20 transition-all duration-500 group relative overflow-hidden"
+          >
+            <div class="absolute inset-0 bg-primary rounded-full scale-90 opacity-0 group-hover:scale-100 group-hover:opacity-20 transition-all duration-500"></div>
+            <v-icon :icon="contact.icon" class="relative z-10 group-hover:scale-110 transition-transform duration-300"></v-icon>
+          </a>
+        </div>
       </div>
-      <div class="d-flex justify-center">
-        <ul>
-          <li v-for="contact in contacts.slice(3, 6)" :key="contact.address">
-            <a :href="contact.address" target="_blank">
-              <v-icon>{{ contact.icon }}</v-icon>
-            </a>
-          </li>
-        </ul>
+      
+      <!-- Second Row -->
+      <div class="flex justify-center">
+        <div class="flex gap-6">
+          <a 
+            v-for="contact in contacts.slice(3, 6)" 
+            :key="contact.address"
+            :href="contact.address" 
+            target="_blank"
+            class="w-20 h-20 sm:w-24 sm:h-24 bg-neutral-800 rounded-full flex items-center justify-center text-3xl text-neutral-300 hover:text-primary hover:shadow-lg hover:shadow-primary/20 transition-all duration-500 group relative overflow-hidden"
+          >
+            <div class="absolute inset-0 bg-primary rounded-full scale-90 opacity-0 group-hover:scale-100 group-hover:opacity-20 transition-all duration-500"></div>
+            <v-icon :icon="contact.icon" class="relative z-10 group-hover:scale-110 transition-transform duration-300"></v-icon>
+          </a>
+        </div>
       </div>
     </div>
-    <div>
-      <div class="d-flex justify-end mr-5">
-        <v-icon class="mr-2" size="small" color="primary">mdi-at</v-icon><p class="mr-2">Email: </p>brzeczkowska.w@gmail.com
+    
+    <!-- Contact Information - Bottom of Component -->
+    <div class="absolute bottom-0 sm:bottom-4 right-4 space-y-1 text-right">
+      <div class="flex justify-end items-center gap-2">
+        <v-icon icon="mdi-at" size="small" class="text-primary"></v-icon>
+        <span class="text-neutral-300 text-sm">Email:</span>
+        <span class="text-white text-sm">brzeczkowska.w@gmail.com</span>
       </div>
-      <div class="d-flex justify-end mr-5">
-        <v-icon class="mr-2" size="small" color="primary">mdi-phone</v-icon><p class="mr-2">Phone number: </p>+31 617278642
+      
+      <div class="flex justify-end items-center gap-2">
+        <v-icon icon="mdi-phone" size="small" class="text-primary"></v-icon>
+        <span class="text-neutral-300 text-sm">Phone:</span>
+        <span class="text-white text-sm">+31 617278642</span>
       </div>
-      <div class="d-flex justify-end mr-5">
-        <v-icon class="mr-2" size="small" color="primary">mdi-map-marker</v-icon><p class="mr-2">Location: </p>Utrecht
+      
+      <div class="flex justify-end items-center gap-2">
+        <v-icon icon="mdi-map-marker" size="small" class="text-primary"></v-icon>
+        <span class="text-neutral-300 text-sm">Location:</span>
+        <span class="text-white text-sm">Utrecht</span>
       </div>
     </div>
-  </v-container>
+  </section>
 </template>
 
 <style scoped>
