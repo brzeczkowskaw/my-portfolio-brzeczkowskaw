@@ -4,77 +4,90 @@ import { projects } from '../variables/projects'
 </script>
 
 <template>
-  <v-container fluid class="mt-7">
-    <h2 class="d-flex align-center">
-      <v-icon size="small" color="secondary" class="mr-5">
-        mdi-star-outline
-      </v-icon>
-      My projects
+  <section class="w-full px-4 py-12 sm:py-20 max-w-6xl mx-auto pt-32 mt-5">
+    <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
+      <span class="text-primary">⭐</span>
+      My Projects
     </h2>
-    <v-card
-      v-for="(item, index) in projects" 
-      :key="index"
-      color="background"
-      elevation="0"
-      class="ma-2 pa-2"
-      width="80vw"
-    >
-      <v-row>
-        <v-col cols="12" sm="6">
-          <p class="text-primary">Project</p>
-          <h3>{{ item.name }}</h3>
-          <v-card color="tertiary" class="ma-3 pa-5" elevation="6">
-            <p>
-              {{ item.text }}
-            </p>
-            <div v-if="item.subtext" class="my-2">
-              <p>
-                {{ item.subtext }}
-              </p>
-              <ul>
-                <li 
-                  v-for="point in item.points" 
-                  :key="point" 
-                  class="ml-4"
-                >
-                  <p>{{ point }}</p>
-                </li>
-              </ul>
+    
+    <div class="space-y-8">
+      <div 
+        v-for="(item, index) in projects" 
+        :key="index"
+        class="bg-neutral-900 rounded-xl shadow-lg p-6 md:p-8"
+      >
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <!-- Project Info -->
+          <div class="space-y-4">
+            <div>
+              <p class="text-primary font-medium mb-2">Project</p>
+              <h3 class="text-2xl font-bold text-white mb-4">{{ item.name }}</h3>
             </div>
-          </v-card>
-        </v-col>
-        <v-col class="my-5">
-          <v-img 
-            :src="`./assets/${item.photos[0]}.jpg`"
-            class="picture"
-          />
-          <div class="mt-3">
-            <v-chip 
-              v-for="tool in item.tools" 
-              :key="tool"
-              label
-              class="ma-1 pa-0 chip-class"
-              density="comfortable"
-            >
-              {{ tool.toUpperCase() }}
-            </v-chip>
+            
+            <div class="bg-neutral-900 rounded-lg p-6 shadow-inner">
+              <p class="text-neutral-300 leading-relaxed mb-4">
+                {{ item.text }}
+              </p>
+              
+              <div v-if="item.subtext" class="space-y-3">
+                <p class="text-neutral-300 font-medium">{{ item.subtext }}</p>
+                <ul class="space-y-2">
+                  <li 
+                    v-for="point in item.points" 
+                    :key="point" 
+                    class="flex items-start gap-2 text-neutral-300"
+                  >
+                    <span class="text-primary mt-1">•</span>
+                    <span>{{ point }}</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <v-row class="my-3 mr-1" justify="end">
-            <a :href="item.github" class="link-icon" target="_blank">
-              <v-icon size="x-large">
-                mdi-github
-              </v-icon>
-            </a>
-            <a :href="item.demo" class="link-icon" target="_blank">
-              <v-icon size="x-large">
-                mdi-web
-              </v-icon>
-            </a>
-          </v-row>
-        </v-col>
-      </v-row>
-    </v-card>
-  </v-container>
+          
+          <!-- Project Image and Links -->
+          <div class="space-y-4">
+            <div class="relative">
+              <img 
+                :src="`./assets/${item.photos[0]}.jpg`"
+                :alt="item.name"
+                class="w-full h-64 object-cover rounded-lg border-2 border-primary shadow-lg shadow-primary/20"
+              />
+            </div>
+            
+            <!-- Tools -->
+            <div class="flex flex-wrap gap-2">
+              <span 
+                v-for="tool in item.tools" 
+                :key="tool"
+                class="px-3 py-1 bg-neutral-800 text-neutral-300 text-sm rounded-full border border-neutral-700 hover:border-primary transition-colors"
+              >
+                {{ tool.toUpperCase() }}
+              </span>
+            </div>
+            
+            <!-- Links -->
+            <div class="flex justify-end gap-4 pt-2">
+              <a 
+                :href="item.github" 
+                target="_blank"
+                class="p-3 bg-neutral-800 rounded-lg hover:bg-primary hover:text-neutral-900 transition-all duration-300 group"
+              >
+                <v-icon icon="mdi-github" size="large" class="group-hover:scale-110 transition-transform"></v-icon>
+              </a>
+              <a 
+                :href="item.demo" 
+                target="_blank"
+                class="p-3 bg-neutral-800 rounded-lg hover:bg-primary hover:text-neutral-900 transition-all duration-300 group"
+              >
+                <v-icon icon="mdi-web" size="large" class="group-hover:scale-110 transition-transform"></v-icon>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
 
 <style scoped>

@@ -18,7 +18,7 @@ export const contacts = [
   },
   {
     address:
-      "https://drive.google.com/file/d/16aj68qBkJncj13tq68L-0qsn4zErjS-o/view?usp=sharing",
+      "https://drive.google.com/file/d/1d4jhUjkMu_B5OoiRQDLLoY7CvtgJxBHc/view?usp=drive_link",
     icon: "mdi-file-account",
   },
 ];

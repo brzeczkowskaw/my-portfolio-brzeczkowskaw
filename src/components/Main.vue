@@ -1,71 +1,35 @@
 <script setup lang="ts">
 import { about } from "../variables/aboutMe"
-import { computed } from "vue"
-
-const isScreenBig = computed(() => {
-  return window.screen.availWidth > 750;
-})
 </script>
 
 <template>
-  <v-container fluid class="mt-7">
-    <p class="text-primary">
-      Hello, my name is
-    </p>
-    <h1>{{ about.name }}</h1>
-    <v-card 
-      color="background" 
-      elevation="0" 
-      :width="isScreenBig ? '70%' : '95%'" 
-      :class="isScreenBig ? 'pa-5' : 'py-5'"
-    >
-      <v-card-text>
-        <p class="main-text mb-3 text-justify">
-          {{ about.mainText }}
-        </p>
-        <p class="main-text text-justify">
-          {{ about.mainText2 }}
-        </p>
-      </v-card-text>
-    </v-card>
+  <section class="flex flex-col items-center justify-center min-h-[60vh] w-full px-4 py-12 sm:py-20 text-center">
+    <p class="text-primary text-base sm:text-lg font-semibold mb-2 tracking-wide">Hello, my name is</p>
+    <h1 class="font-extrabold text-3xl sm:text-5xl md:text-6xl mb-4 leading-tight font-sans" style="font-family: 'Special Elite', 'Saira Semi Condensed', Arial, sans-serif;">
+      {{ about.name }}
+    </h1>
+    <div class="max-w-2xl w-full bg-neutral-900 rounded-2xl shadow-lg p-6 sm:p-10 mb-6">
+      <p class="main-text mb-3 text-lg sm:text-xl text-gray-200">
+        {{ about.mainText }}
+      </p>
+      <p class="main-text text-lg sm:text-xl text-gray-400">
+        {{ about.mainText2 }}
+      </p>
+    </div>
     <a href="mailto: brzeczkowska.w@gmail.com">
-      <v-btn 
-        color="primary" 
-        class="text-white mx-8" 
-        variant="outlined"
-      >
+      <button class="bg-primary text-neutral-900 font-bold px-8 py-3 rounded-full shadow-md hover:bg-primary/80 transition-colors text-lg mt-2">
         Get in touch
-      </v-btn>
+      </button>
     </a>
-  </v-container>
+  </section>
 </template>
 
 <style scoped>
-p, h2, h3, h1 {
-  font-family: "Saira Semi Condensed"
-}
-p {
-  font-size: 1.1rem;
-}
-h1 {
-  font-family: "Special Elite"
-}
-.photo {
-  height: 15em;
-  border-radius: 50px;
-  opacity: 0.5;
-}
-.photo:hover {
-  opacity: 1;
+@import url('https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@400;700&family=Special+Elite&display=swap');
+.font-sans {
+  font-family: 'Saira Semi Condensed', Arial, sans-serif;
 }
 .main-text {
-  font-size: 1.3rem;
-  line-height: 1.5rem;
-}
-@media(max-width: 750px) {
-  .main-text {
-    font-size: 1.1rem;
-    line-height: 1.2rem;
-  }
+  font-family: 'Saira Semi Condensed', Arial, sans-serif;
 }
 </style>

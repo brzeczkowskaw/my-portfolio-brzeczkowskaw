@@ -4,55 +4,25 @@ import { tools } from '../variables/tools'
 </script>
 
 <template>
-  <v-container fluid class="mt-7">
-    <h2 class="d-flex align-center">
-      <v-icon size="small" color="secondary" class="mr-5">
-        mdi-star-outline
-      </v-icon>
-      Tools
+  <section class="w-full px-4 py-12 sm:py-20 max-w-6xl mx-auto pt-32 mt-5">
+    <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
+      <span class="text-primary">⭐</span>
+      Tools & Technologies
     </h2>
-    <div class="d-flex justify-center">
-      <v-card 
-        class="tools-card pa-4 mx-5 my-10 text-center" 
-        color="background"
-        elevation="8"
-      >
-        <div class="my-8">
-          <v-card 
-            v-for="tool in tools" 
-            :key="tool.name"
-            class="d-inline-flex pa-3 ma-2 rounded-lg"
-            width="160"
-            color="primary"
-            elevation="10"
-          >
-            <v-icon class="mr-5">{{tool.icon}}</v-icon>
-            <p>{{ tool.name }}</p>
-          </v-card>
+    
+    <div class="bg-neutral-900 rounded-xl shadow-lg p-6 md:p-8">
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6">
+        <div 
+          v-for="tool in tools" 
+          :key="tool.name"
+          class="bg-neutral-800 rounded-lg p-4 flex flex-col items-center gap-3 transition-all duration-300 hover:bg-primary hover:text-neutral-900 hover:scale-105 hover:shadow-lg cursor-pointer group"
+        >
+          <div class="w-12 h-12 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+            <v-icon :icon="tool.icon" size="x-large"></v-icon>
+          </div>
+          <span class="text-sm font-medium text-center">{{ tool.name }}</span>
         </div>
-      </v-card>
+      </div>
     </div>
-  </v-container>
+  </section>
 </template>
-
-<style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Mallanna&family=Squada+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=GFS+Didot&family=Mallanna&family=Squada+One&display=swap');
-
-p, h2, h3, h1 {
-  font-family: "Saira Semi Condensed"
-}
-p {
-  font-size: 1.1rem;
-}
-.tools-card {
-  width: 40vw;
-  margin-top: 3rem;
-}
-@media(max-width: 480px) {
-  .tools-card {
-    width: 90vw;
-    margin-top: 0;
-  }
-}
-</style>
